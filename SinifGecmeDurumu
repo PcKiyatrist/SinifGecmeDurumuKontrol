@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class SinifiGecme {
+    public static void main(String[] args){
+        int mat,fizik,turkce,kimya,muzik,dersSayisi=0;
+        Scanner input=new Scanner(System.in);
+
+        System.out.print("Matematik Notunuz : ");
+        mat=input.nextInt();
+        if(!(mat <= 0 || mat > 100)) {
+            dersSayisi++;
+        }
+
+        System.out.print("Fizik Notunuz : ");
+        fizik=input.nextInt();
+        if(!(fizik <= 0 || fizik > 100)) {
+            dersSayisi++;
+        }
+
+        System.out.print("Türkçe Notunuz : ");
+        turkce=input.nextInt();
+        if(!(turkce <= 0 || turkce > 100)) {
+            dersSayisi++;
+        }
+
+        System.out.print("Kimya Notunuz : ");
+        kimya=input.nextInt();
+        if(!(kimya <= 0 || kimya > 100)) {
+            dersSayisi++;
+        }
+
+        System.out.print("Müzik Notunuz : ");
+        muzik=input.nextInt();
+        if(!(muzik <= 0 || muzik > 100)) {
+            dersSayisi++;
+        }
+
+        if (dersSayisi==0){
+            System.out.println("Ders Notlarını Hatalı Girdiniz, Değerler 1 ve 100 " +
+                    "Arasında OLmalı, Lütfen 0 ve 100 den Büyük Değer Girmeyiniz");
+        }else{
+            double avarage=(mat+fizik+turkce+kimya+muzik)/dersSayisi;
+            if(avarage<=55){
+                System.out.println(avarage+" : Sınıfta Kaldınız");
+            }else{
+                System.out.println(avarage+" : Tebrikler Geçtiniz");
+            }
+        }
+
+
+    }
+}
